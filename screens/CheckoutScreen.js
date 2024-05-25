@@ -31,7 +31,7 @@ const CheckoutScreen = ({ route, startLoading, stopLoading }) => {
       style.type = 'text/css';
       style.appendChild(document.createTextNode('.mkdf-mobile-header { display: none !important; }'));
       style.appendChild(document.createTextNode('.mkdf-page-footer { display: none !important; }'));
-      style.appendChild(document.createTextNode('.mkdf-content    { background-color: antiquewhite; }'));
+      style.appendChild(document.createTextNode('.mkdf-content    { background-color: #1C242A; }'));
       style.appendChild(document.createTextNode('p.order-again {display: none;}'));
       style.appendChild(document.createTextNode('.mkdf-container-inner.clearfix {padding: 0px !important;}'));
       style.appendChild(document.createTextNode('.mkdf-title-holder.mkdf-standard-type.mkdf-title-va-header-bottom {display: none;}'));
@@ -45,8 +45,8 @@ const CheckoutScreen = ({ route, startLoading, stopLoading }) => {
   };
 
   const onShouldStartLoadWithRequest = (event) => {
-    // Check if the requested URL contains 'https://hannahgracematernity'
-    if (event.url ==='https://hannahgracematernity.co.za/'|| event.url ==='https://hannahgracematernity.co.za/shop') {
+    // Check if the requested URL contains 'https://1903laundrymaternity'
+    if (event.url ==='https://1903laundry.co.za/'|| event.url ==='https://1903laundry.co.za/shop') {
       // Navigate to OrdersScreen
       navigation.navigate('OrdersScreen');
       // Prevent loading the URL in the WebView
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     height:'100%',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor:Colors.secondary,
+    backgroundColor:Colors.background,
   },
 });
 

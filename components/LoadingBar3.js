@@ -33,7 +33,7 @@ const LoadingBar3 = () => {
     <View style={styles.Container}>
       <Animated.Image
         source={
-          require('../assets/pregnancy3.png')
+          require('../assets/iron.png')
         }
         style={{
           width: 100, // Set the width to 90% of the screen width

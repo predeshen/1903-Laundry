@@ -25,7 +25,7 @@ const TopBar = ({text}) => {
         </TouchableOpacity>
         <View style={styles.header}>
         </View>
-        <Text style={[CommonStyles.headerText]}>Hannah Grace</Text>
+        <Text style={[CommonStyles.headerText]}>1903 Laundry</Text>
         <ScrollingText text={text} />
       </View>
     </SafeAreaView>
@@ -35,13 +35,13 @@ const TopBar = ({text}) => {
 
 const styles = StyleSheet.create({
   safeArea: {
-    backgroundColor: Colors.secondary,
-    height: 250,
+    backgroundColor: Colors.background,
+    height: 160,
   },
   container: {
     paddingHorizontal: 15,
     alignItems: 'center',
-    height: 200,
+    height: 90,
   },
   companyName: {
     ...headerFontStyle,

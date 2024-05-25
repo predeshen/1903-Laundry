@@ -38,7 +38,7 @@ const GlobalLoading = () => {
           textAlign: 'center',
         }}
       >
-        Hannah Grace
+        1903 Laundry
         Loading...
       </Animated.Text>
 
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     right: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.secondary, // Adjust the background color and opacity
+    backgroundColor: Colors.background, // Adjust the background color and opacity
   },
   FooterContainer: {
     position: 'absolute', // Use "absolute" positioning

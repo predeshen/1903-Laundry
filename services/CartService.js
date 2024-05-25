@@ -7,7 +7,7 @@ import Toast from 'react-native-root-toast';
 export const getCartItems = async () => {
   const userToken = await getUserToken();
 
-    const response = await axios.post(`https://hannahgracematernity.co.za/wp-json/wc/store/cart/`, {
+    const response = await axios.post(`https://1903laundry.co.za/wp-json/wc/store/cart/`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${userToken}`,
@@ -32,7 +32,7 @@ export const addToCart = async (selecteditem) => {
     quantity: 1,
   });
 
-    const response = await axios.post(`https://hannahgracematernity.co.za/wp-json/wc/store/cart/add-item?${queryParams}`, {
+    const response = await axios.post(`https://1903laundry.co.za/wp-json/wc/store/cart/add-item?${queryParams}`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${userToken}`,
@@ -54,7 +54,7 @@ export const addToCart = async (selecteditem) => {
           hideOnPress: true,
           delay: 0,
           backgroundColor: '#DD3333',
-          textColor: 'antiquewhite',
+          textColor: '#1C242A',
           opacity: 0.8,
           textStyle: {fontSize: 24,fontWeight: 'thin'},
           containerStyle: {width: '100%'},        
@@ -71,7 +71,7 @@ export const removeFromCart= async (key) => {
   });
 
   try {
-    const response = await fetch(`https://hannahgracematernity.co.za/wp-json/wc/store/cart/items/${key}`, {
+    const response = await fetch(`https://1903laundry.co.za/wp-json/wc/store/cart/items/${key}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${userToken}`,
@@ -92,7 +92,7 @@ export const removeFromCart= async (key) => {
         hideOnPress: true,
         delay: 0,
         backgroundColor: '#DD3333',
-        textColor: 'antiquewhite',
+        textColor: '#1C242A',
         opacity: 0.8,
         textStyle: {fontSize: 24,fontWeight: 'thin'},
         containerStyle: {width: '100%'},        
@@ -110,7 +110,7 @@ export const removeFromCart= async (key) => {
       hideOnPress: true,
       delay: 0,
       backgroundColor: '#DD3333',
-      textColor: 'antiquewhite',
+      textColor: '#1C242A',
       opacity: 0.8,
       textStyle: {fontSize: 24,fontWeight: 'thin'},
       containerStyle: {width: '100%'},        
@@ -126,7 +126,7 @@ export const clearCart= async (key) => {
   const userToken = await getUserToken();
  
   try {
-    const response = await fetch(`https://hannahgracematernity.co.za/wp-json/wc/store/cart/items/`, {
+    const response = await fetch(`https://1903laundry.co.za/wp-json/wc/store/cart/items/`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${userToken}`,
@@ -144,7 +144,7 @@ export const clearCart= async (key) => {
       hideOnPress: true,
       delay: 0,
       backgroundColor: '#DD3333',
-      textColor: 'antiquewhite',
+      textColor: '#1C242A',
       opacity: 0.8,
       textStyle: {fontSize: 24,fontWeight: 'thin'},
       containerStyle: {width: '100%'},        
@@ -161,7 +161,7 @@ export const clearCart= async (key) => {
               hideOnPress: true,
               delay: 0,
               backgroundColor: '#DD3333',
-              textColor: 'antiquewhite',
+              textColor: '#1C242A',
               opacity: 0.8,
               textStyle: {fontSize: 24,fontWeight: 'thin'},
               containerStyle: {width: '100%'},        
@@ -181,7 +181,7 @@ export const clearCart= async (key) => {
     try {
       const userToken = await SecureStore.getItemAsync('userToken');
       if (userToken) {
-        const response = await fetch('https://www.hannahgracematernity.co.za/wp-json/wc/store/cart/', {
+        const response = await fetch('https://www.1903laundrymaternity.co.za/wp-json/wc/store/cart/', {
           headers: {
             Authorization: `Bearer ${userToken}`,
           },
@@ -199,7 +199,7 @@ export const clearCart= async (key) => {
   export const getCartItems2 = async () => {
    
       const userToken = await SecureStore.getItemAsync('userToken');
-        const response = await fetch('https://hannahgracematernity.co.za/wp-json/wc/store/cart/', {
+        const response = await fetch('https://1903laundry.co.za/wp-json/wc/store/cart/', {
           headers: {
             Authorization: `Bearer ${userToken}`,
           },

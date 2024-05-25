@@ -2,7 +2,7 @@ import axios from 'axios';
 import * as SecureStore from 'expo-secure-store';
 
 const fetchSignInToken = async (username, password) => {
-    const response = await axios.post('https://hannahgracematernity.co.za/wp-json/jwt-auth/v1/token', {
+    const response = await axios.post('https://1903laundry.co.za/wp-json/jwt-auth/v1/token', {
       username: username,
       password: password,
     });
@@ -21,7 +21,7 @@ const fetchSecondRequestToken = async (username, password) => {
       password: password
     };
 
-    const response = await fetch('https://hannahgracematernity.co.za/wp-json/api/v1/mo-jwt', {
+    const response = await fetch('https://1903laundry.co.za/wp-json/api/v1/mo-jwt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

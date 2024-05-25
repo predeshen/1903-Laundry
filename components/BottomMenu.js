@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderTopWidth: 1,
     borderColor: '#ddd',
-    backgroundColor: Colors.secondary,
+    backgroundColor: Colors.background,
     paddingVertical: 10,
     position: 'absolute', // Set the position to absolute
     bottom: 0, // Set the bottom position to 0

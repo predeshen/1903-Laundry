@@ -207,7 +207,7 @@ const ARComponent = () => {
   disabled={!image}
 >
          {isLoading ? (
-            <ActivityIndicator color={Colors.white} />
+            <ActivityIndicator color={Colors.body} />
           ) : (
             <Text style={[CommonStyles.buttonTextNormal]}>Estimate Size</Text>
             )}
@@ -336,7 +336,7 @@ const styles = StyleSheet.create({
     color: Colors.primary,
   },
   modalSaveButton: {
-    backgroundColor: Colors.secondary, // Button background color for Save button
+    backgroundColor: Colors.background, // Button background color for Save button
     ...CommonStyles.buttonTextNormal,
   },
 });

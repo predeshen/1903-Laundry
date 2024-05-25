@@ -25,7 +25,7 @@ const wooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
 // import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM
 
 const WooCommerce = new wooCommerceRestApi({
-  url: 'https://hannahgracematernity.co.za',
+  url: 'https://1903laundry.co.za',
   consumerKey: CONSUMER_KEY,
   consumerSecret: CONSUMER_SECRET,
   version: 'wc/v3',
@@ -235,7 +235,7 @@ export const getRandomProducts = async () => {
 
 export const fetchSignInToken = async (username, password) => {
 
-  const response = await axios.post('https://hannahgracematernity.co.za/wp-json/jwt-auth/v1/token', {
+  const response = await axios.post('https://1903laundry.co.za/wp-json/jwt-auth/v1/token', {
     username: username,
     password: password,
   });
@@ -256,7 +256,7 @@ export const fetchSecondRequestToken = async (username, password) => {
     password: password
   };
 
-  const response = await fetch('https://hannahgracematernity.co.za/wp-json/api/v1/mo-jwt', {
+  const response = await fetch('https://1903laundry.co.za/wp-json/api/v1/mo-jwt', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -295,7 +295,7 @@ try {
     try {
       const userToken = await SecureStore.getItemAsync('userToken');
       if (userToken) {
-        const response = await fetch('https://hannahgracematernity.co.za/wp-json/wc/store/cart/', {
+        const response = await fetch('https://1903laundry.co.za/wp-json/wc/store/cart/', {
           headers: {
             Authorization: `Bearer ${userToken}`,
           },

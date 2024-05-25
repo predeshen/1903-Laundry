@@ -12,7 +12,7 @@ const wooCommerceRestApi = require("@woocommerce/woocommerce-rest-api").default;
 // import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api"; // Supports ESM
 
 export const WooCommerce = new wooCommerceRestApi({
-  url: 'https://hannahgracematernity.co.za',
+  url: 'https://1903laundry.co.za',
   consumerKey: CONSUMER_KEY,
   consumerSecret: CONSUMER_SECRET,
   version: 'wc/v3',

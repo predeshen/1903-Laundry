@@ -1,8 +1,10 @@
 // themes.js
 
 export const Colors = {
-    primary: '#DD3333',
-    secondary: 'antiquewhite',
+    primary: '#B4B4B4',
+    background: '#1C242A',
+    body: '#E4C4BC',
+    border: '#84DCBC'
     // Add more colors as needed
   };
   
@@ -41,19 +43,19 @@ export const Colors = {
       alignItems: 'center',
     },
     buttonText: {
-      color: Colors.secondary,
-      fontSize: 24,
+      color: Colors.body,
+      fontSize: 14,
       fontFamily:Fonts.header,
       fontWeight: 'bold',
       },
       buttonTextNormal: {
-        color: Colors.secondary,
-        fontSize: 24,
+        color: Colors.body,
+        fontSize: 14,
         fontWeight: 'bold',
         },
         buttonTextRed: {
-          color: Colors.primary,
-          fontSize: 18,
+          color: Colors.body,
+          fontSize: 12,
           fontFamily:Fonts.header,
           fontWeight: 'bold',
           },

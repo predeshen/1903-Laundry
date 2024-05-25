@@ -60,7 +60,7 @@ const SignInScreen = ({ startLoading, stopLoading }) => {
             hideOnPress: true,
             delay: 0,
             backgroundColor: '#DD3333',
-            textColor: 'antiquewhite',
+            textColor: '#1C242A',
             opacity: 0.8,
             textStyle: {fontSize: 24,fontWeight: 'thin'},
             containerStyle: {width: '100%'},        
@@ -111,8 +111,8 @@ const SignInScreen = ({ startLoading, stopLoading }) => {
   const isSignUpButtonDisabled =  !isValidEmail
   return (
     <View style={[CommonStyles.container, styles.container]}>
-    <Text style={CommonStyles.headerText}>Hannah Grace</Text>
-    <Text style={styles.header}>Welcome to Hannah Grace</Text>
+    <Text style={CommonStyles.headerText}>1903 Laundry</Text>
+    <Text style={styles.header}>Welcome to 1903 Laundry</Text>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
@@ -138,7 +138,7 @@ const SignInScreen = ({ startLoading, stopLoading }) => {
           onPress={handleSingIn2}
         >
           {isLoading ? (
-            <ActivityIndicator color={Colors.white} />
+            <ActivityIndicator color={Colors.body} />
           ) : (
             <Text style={[CommonStyles.buttonText]}>Sign In</Text>
           )}
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.secondary, // Change the background color
+    backgroundColor: Colors.background, // Change the background color
   },
   logo: {
     width: 150, // Adjust the logo dimensions as needed
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'thin', 
     marginBottom: 20,
-    color: Colors.white, // Change the text color
+    color: Colors.body, // Change the text color
   },
   inputContainer: {
     width: '80%',
@@ -183,12 +183,12 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     borderWidth: 1,
-    borderColor: Colors.gray, // Change the border color
+    borderColor: Colors.border, // Change the border color
     borderRadius: 5,
     marginBottom: 10,
     paddingHorizontal: 10,
-    backgroundColor: Colors.lightGray, // Change the input background color
-    color: Colors.black, // Change the text color
+    backgroundColor: Colors.primary, // Change the input background color
+    color: Colors.body, // Change the text color
   },
   signInButton: {
     borderRadius: 5,

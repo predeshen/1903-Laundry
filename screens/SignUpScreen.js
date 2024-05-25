@@ -22,16 +22,18 @@ const SignUpScreen = ({ route, startLoading, stopLoading }) => {
   (function() {
     var style = document.createElement('style');
     style.type = 'text/css';
-    style.appendChild(document.createTextNode('.mkdf-mobile-header                { display: none !important; }'));
-    style.appendChild(document.createTextNode('.mkdf-page-footer                  { display: none !important; }'));
-    style.appendChild(document.createTextNode('.ht_ctc_style.ht_ctc_chat_style    { display: none !important; }')); 
-    style.appendChild(document.createTextNode('.u-column1.col-1                   { display: none !important; }')); 
-    style.appendChild(document.createTextNode('.woocommerce-password-strength.bad { font-weight: bolder; color: red; !important;}')); 
+    style.appendChild(document.createTextNode('header.jupiterx-header.jupiterx-header-custom.jupiterx-header-sticky-custom {
+      display: none; !important;
+  }'));
+    style.appendChild(document.createTextNode('section.elementor-section.elementor-top-section.elementor-element.elementor-element-7491fd7.elementor-section-height-min-height.elementor-section-full_width.elementor-section-stretched.elementor-section-height-default.elementor-section-items-middle {
+      display: none; !important;
+  }'));
+    style.appendChild(document.createTextNode('footer.jupiterx-footer {display: none ;!important;}'));
+    style.appendChild(document.createTextNode('.woocommerce-password-strength.bad { font-weight: bolder; color: red !important;}')); 
     style.appendChild(document.createTextNode('small.woocommerce-password-hint    { color: red; !important; }')); 
-    style.appendChild(document.createTextNode('.mkdf-container-inner.clearfix     { padding: 0; !important; }'));
-    style.appendChild(document.createTextNode('.mkdf-content    { background-color: antiquewhite; }'));
+    style.appendChild(document.createTextNode('body .jupiterx-site {color: #E4C4BC; !important;}'));
+    style.appendChild(document.createTextNode('.jupiterx-main{ background-color: #1C242A; !important; }'));
     document.head.appendChild(style);
-    ${loadingStartScript}
     
     // Add a click event listener to the "Register" button
     const registerButton = document.querySelector('.woocommerce-Button[name="register"]');
@@ -80,36 +82,38 @@ const loadingStartScript = `
   })();
 `;
 const handleWebViewLoadEnd = (event) => {
-  webViewRef.current.injectJavaScript(userLoginCheckScript);
+  //startLoading();
+  webViewRef.current.injectJavaScript(injectedJavaScript);
+ // webViewRef.current.injectJavaScript(userLoginCheckScript);
   stopLoading();
 };
 
-  const handleWebViewMessage =  (event)  => {
-    try {
-      const message = JSON.parse(event.nativeEvent.data);
-   if (message.type === 'loadingStart') {
-      // You can call your startLoading() method here
-      startLoading();
-    } 
-    else if (message.type === 'registerCredentials') {
-      setUsername(message.username); // Use setUsername to update the state
-      setPassword(message.password); 
-      setRegistrationMessage('Registering...'); // Display a registration message
-    }
-   else if (message.type === 'loggedInCredentials') {
-        const token =  fetchSignInToken(username, password);
-         fetchSecondRequestToken(username, password);
-         SecureStore.setItemAsync('username', username);
-        stopLoading();
-        setRegistrationMessage('Registration successful! Redirecting...'); // Display a success message
-        navigation.navigate('InstagramStyleScreen', { userToken: token });
-        // Handle the credentials as needed
-      } 
-    } catch (error) {
-      navigation.navigate('SignIn');
-      setErrorText('Error parsing WebView message:', error);
-    }
-  };
+  // const handleWebViewMessage =  (event)  => {
+  //   try {
+  //     const message = JSON.parse(event.nativeEvent.data);
+  //  if (message.type === 'loadingStart') {
+  //     // You can call your startLoading() method here
+  //     startLoading();
+  //   } 
+  //   else if (message.type === 'registerCredentials') {
+  //     setUsername(message.username); // Use setUsername to update the state
+  //     setPassword(message.password); 
+  //     setRegistrationMessage('Registering...'); // Display a registration message
+  //   }
+  //  else if (message.type === 'loggedInCredentials') {
+  //       const token =  fetchSignInToken(username, password);
+  //        fetchSecondRequestToken(username, password);
+  //        SecureStore.setItemAsync('username', username);
+  //       stopLoading();
+  //       setRegistrationMessage('Registration successful! Redirecting...'); // Display a success message
+  //       navigation.navigate('InstagramStyleScreen', { userToken: token });
+  //       // Handle the credentials as needed
+  //     } 
+  //   } catch (error) {
+  //     navigation.navigate('SignIn');
+  //     setErrorText('Error parsing WebView message:', error);
+  //   }
+  // };
 
   useEffect(() => {
     startLoading();
@@ -129,16 +133,21 @@ const handleWebViewLoadEnd = (event) => {
       <WebView
         incognito={true}
         ref={webViewRef}
-        source={{ uri: 'https://hannahgracematernity.co.za/my-account' }}
+        source={{ uri: 'https://1903laundry.co.za/my-account' }}
         injectedJavaScript={injectedJavaScript}
         javaScriptEnabled={true}
         javaScriptEnabledAndroid={true}
         sharedCookiesEnabled={false}
         onLoadStart={() => {
+          setIsLoading(true);
           startLoading();
         }}
-        onLoadEnd={handleWebViewLoadEnd}
-        onMessage={handleWebViewMessage}
+        onLoadEnd={() => {
+          setIsLoading(false);
+          stopLoading();
+        }}
+        //onLoadEnd={handleWebViewLoadEnd}
+        // onMessage={handleWebViewMessage}
       />
     </View>
   );
@@ -154,7 +163,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.secondary,
+    backgroundColor: Colors.primary,
     height:'100%',
     width:'100%',
   },

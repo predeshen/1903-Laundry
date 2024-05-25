@@ -189,7 +189,7 @@ const InstagramFeedScreen = ({ navigation, startLoading, stopLoading}) => {
     style.type = 'text/css';
     style.appendChild(document.createTextNode('.mkdf-mobile-header { display: none !important; }'));
     style.appendChild(document.createTextNode('.mkdf-page-footer { display: none !important; }'));
-    style.appendChild(document.createTextNode('.mkdf-content    { background-color: antiquewhite !important; ; }'));
+    style.appendChild(document.createTextNode('.mkdf-content    { background-color: #1C242A !important; ; }'));
     style.appendChild(document.createTextNode('.mkdf-title-holder.mkdf-standard-type.mkdf-title-va-header-bottom { display: none;}'));
     style.appendChild(document.createTextNode('p.order-again {display: none;}'));
     style.appendChild(document.createTextNode('li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--downloads {display: none;}'));
@@ -197,7 +197,7 @@ const InstagramFeedScreen = ({ navigation, startLoading, stopLoading}) => {
     style.appendChild(document.createTextNode('li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--contributions { display: none;}'));
     style.appendChild(document.createTextNode('li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--customer-logout { display: none;}'));
     style.appendChild(document.createTextNode('li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--dashboard {display: none;}'));
-    style.appendChild(document.createTextNode('nav.woocommerce-MyAccount-navigation { background-color: antiquewhite !important; ; }'));
+    style.appendChild(document.createTextNode('nav.woocommerce-MyAccount-navigation { background-color: #1C242A !important; ; }'));
     style.appendChild(document.createTextNode('p.order-again {display: none;}'));
     style.appendChild(document.createTextNode('.mkdf-container-inner.clearfix {padding: 0px !important;}'));
     style.appendChild(document.createTextNode('div#ht-ctc-chat {display: none;}'));
@@ -556,7 +556,7 @@ const InstagramFeedScreen = ({ navigation, startLoading, stopLoading}) => {
     onPress={() => handleReviewArticle()}
   >
     {isLoading ? (
-      <ActivityIndicator color={Colors.white} />
+      <ActivityIndicator color={Colors.body} />
     ) : (
       <View>
         <Image
@@ -572,7 +572,7 @@ const InstagramFeedScreen = ({ navigation, startLoading, stopLoading}) => {
     onPress={() => handleAddToCart(product.id)}
   >
     {isLoading ? (
-      <ActivityIndicator color={Colors.white} />
+      <ActivityIndicator color={Colors.body} />
     ) : (
       <View>
         <Image
@@ -613,7 +613,7 @@ const InstagramFeedScreen = ({ navigation, startLoading, stopLoading}) => {
       style={styles.icon}
     />
       {isLoading ? (
-      <ActivityIndicator color={Colors.white} />
+      <ActivityIndicator color={Colors.body} />
           ) : (
         <Text style={styles.floatingButtonText}>Filter</Text>         
         )}
@@ -657,7 +657,7 @@ const InstagramFeedScreen = ({ navigation, startLoading, stopLoading}) => {
   disabled={!selectedVariation || isLoadingVariations}
 >
   {isLoadingVariations ? (
-    <ActivityIndicator color={Colors.white} />
+    <ActivityIndicator color={Colors.body} />
   ) : (
     <Text style={styles.modalButtonText}>
       {selectedVariation ? 'Add to Cart' : 'Select an Option First'}
@@ -694,7 +694,7 @@ const InstagramFeedScreen = ({ navigation, startLoading, stopLoading}) => {
         originWhitelist={['*']}
         incognito={false}
         ref={webViewRef}
-        source={{ uri: "https://hannahgracematernity.co.za/reviews/" }}
+        source={{ uri: "https://1903laundry.co.za/reviews/" }}
         javaScriptEnabled={true}
         javaScriptEnabledAndroid={true}
         javaScriptEnabledIOS={true}
@@ -795,7 +795,7 @@ const InstagramFeedScreen = ({ navigation, startLoading, stopLoading}) => {
                 onPress={applyCategoryFilters}
           >
            {isLoading ? (
-            <ActivityIndicator color={Colors.white} />
+            <ActivityIndicator color={Colors.body} />
             ) : (
             <Text style={styles.modalButtonText}>Apply Filters</Text>
             )}
@@ -806,7 +806,7 @@ const InstagramFeedScreen = ({ navigation, startLoading, stopLoading}) => {
                 onPress={clearCategoryFilters}
           >
                        {isLoading ? (
-            <ActivityIndicator color={Colors.white} />
+            <ActivityIndicator color={Colors.body} />
             ) : (
               <Text style={styles.modalButtonText}>Clear Filters</Text>
               )}
@@ -817,7 +817,7 @@ const InstagramFeedScreen = ({ navigation, startLoading, stopLoading}) => {
                 onPress={setIsCategoryModalVisible}
           >
           {isLoading ? (
-            <ActivityIndicator color={Colors.white} />
+            <ActivityIndicator color={Colors.body} />
             ) : (
               <Text style={styles.modalButtonText}>Close</Text>
               )}
@@ -961,7 +961,7 @@ const styles = StyleSheet.create({
     color: Colors.primary,
   },
   modalSaveButton: {
-    backgroundColor: Colors.secondary, // Button background color for Save button
+    backgroundColor: Colors.background, // Button background color for Save button
     ...CommonStyles.buttonTextNormal,
   },
   dropdown: {
@@ -986,7 +986,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     color:Colors.primary,
-    backgroundColor:Colors.secondary,
+    backgroundColor:Colors.background,
   },
   dueDateImage: {
     width: '100%',

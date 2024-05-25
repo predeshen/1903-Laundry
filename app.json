@@ -1,54 +1,27 @@
 {
   "expo": {
-    "name": "HGMobileApp",
-    "slug": "HGMobileApp",
-    "version": "3.0.4",
+    "name": "1903laundry",
+    "slug": "1903laundry",
+    "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/HG_icon.png",
+    "icon": {
+      "image": "./assets/1903-Laundry-Logo.png",
+      "resizeMode": "contain"
+    },
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/Hg-New-Logo.png",
+      "image": "./assets/1903-Laundry-Logo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "assetBundlePatterns": [
-      "**/*","assets/*","assetExts/*"
-    ],
-    "ios": {
-      "googleServicesFile": "./GoogleService-Info.plist",
-      "supportsTablet": true,
-      "bundleIdentifier": "com.hannahgrace.mobileapp",
-      "runtimeVersion": {
-        "policy": "sdkVersion"
-      },
-      "infoPlist": {
-        "NSCameraUsageDescription": "We need access to your camera"
-      }
-    },
-    "android": {
-      "googleServicesFile": "./google-services.json",
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.hannahgrace.mobileapp",
-      "permissions": [
-        "CAMERA"
-      ]
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "backgroundColor": "#B4B4B4"
     },
     "extra": {
       "eas": {
-        "projectId": "695ce03e-55aa-43d3-b3d9-6ba5a5a09ebc"
+        "projectId": "fd0c6d1f-4edd-4320-bc95-71415fd7501a"
       }
     },
-    "updates": {
-      "url": "https://u.expo.dev/695ce03e-55aa-43d3-b3d9-6ba5a5a09ebc"
+    "android": {
+      "package": "laundry.co.za"
     },
-    "plugins": [
-
-    ]
+    "owner": "hashub"
   }
 }

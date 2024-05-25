@@ -35,7 +35,7 @@ const CartScreen = ({ route  , startLoading, stopLoading  }) => {
     try {
       const userToken = await SecureStore.getItemAsync('userToken');
       if (userToken) {
-        const response = await fetch('https://hannahgracematernity.co.za/wp-json/wc/store/cart/', {
+        const response = await fetch('https://1903laundry.co.za/wp-json/wc/store/cart/', {
           headers: {
             Authorization: `Bearer ${userToken}`,
           },
@@ -97,7 +97,7 @@ const CartScreen = ({ route  , startLoading, stopLoading  }) => {
       </View>
       <TouchableOpacity onPress={() => handleRemoveFromCart(item.key)}>
       {isLoading ? (
-            <ActivityIndicator color={Colors.white} />
+            <ActivityIndicator color={Colors.body} />
           ) : (
             <Icon name="trash" size={24} color='white' />
           )}
@@ -129,7 +129,7 @@ const getVariationFromPermalink = (permalink) => {
         return;
       }
 
-      const checkoutUrl = `https://hannahgracematernity.co.za/cart?mo_jwt_token=${autoLoginUserToken}`;
+      const checkoutUrl = `https://1903laundry.co.za/cart?mo_jwt_token=${autoLoginUserToken}`;
       navigation.navigate('CheckoutScreen', { checkoutUrl });
     } catch (error) {
       console.error('Error handling checkout:', error);
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
   },
 
   emptyButton: {
-    color: Colors.secondary,
+    color: Colors.background,
     paddingHorizontal: 15,
     paddingVertical: 5,
     borderRadius: 5,
@@ -201,13 +201,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   checkoutButton: {
-    color: Colors.secondary,
+    color: Colors.background,
     paddingHorizontal: 15,
     paddingVertical: 5,
     borderRadius: 5,
   },
   checkoutButtonText: {
-    color: Colors.secondary,
+    color: Colors.background,
     fontSize: 16,
   },
   cartItemVariation: {
@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: Colors.secondary,
+    backgroundColor: Colors.background,
   },
   contentContainer: {
     flex: 1,
@@ -256,11 +256,11 @@ const styles = StyleSheet.create({
   },
   cartItemPrice: {
     fontSize: 18,
-    color: Colors.secondary,
+    color: Colors.background,
   },
   deleteIcon: {
     marginLeft: 10,
-    color: Colors.secondary,
+    color: Colors.background,
   },
   totalContainer: {
     flexDirection: 'row',
