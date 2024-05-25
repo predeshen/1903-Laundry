@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "HGMobileApp",
+    "slug": "HGMobileApp",
+    "version": "3.0.4",
+    "orientation": "portrait",
+    "icon": "./assets/HG_icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/Hg-New-Logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*","assets/*","assetExts/*"
+    ],
+    "ios": {
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hannahgrace.mobileapp",
+      "runtimeVersion": {
+        "policy": "sdkVersion"
+      },
+      "infoPlist": {
+        "NSCameraUsageDescription": "We need access to your camera"
+      }
+    },
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.hannahgrace.mobileapp",
+      "permissions": [
+        "CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "695ce03e-55aa-43d3-b3d9-6ba5a5a09ebc"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/695ce03e-55aa-43d3-b3d9-6ba5a5a09ebc"
+    },
+    "plugins": [
+
+    ]
+  }
+}

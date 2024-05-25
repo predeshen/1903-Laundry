@@ -1,0 +1,3 @@
+`
+alert("Injected JavaScript executed!");
+`

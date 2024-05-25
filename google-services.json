@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "593757058870",
+    "project_id": "hgmobileapp-c322c",
+    "storage_bucket": "hgmobileapp-c322c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593757058870:android:4b2088769681c2a761e597",
+        "android_client_info": {
+          "package_name": "com.hannahgrace.mobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593757058870-8ts3jc797h7hmgjkl66b8le206vtchdi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFyFDx8X6ULZ_GWiGdp31KUeIv6Uq93ng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593757058870-8ts3jc797h7hmgjkl66b8le206vtchdi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "593757058870-l8eatn2rc09nj1so5fh6899a76f44u0o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hannahgrace.mobileapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
